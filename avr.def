@@ -1,0 +1,43 @@
+AVR -> Native
+CLASS top
+24=0,26=1,28=2,30=3
+*
+ADC	R\B,R\B
+1C|2>3&FE|1>4 \2&0F|1<4
+ADD	R\B,R\B
+0C|2>3&FE|1>4 \2&0F|1<4
+ADIW    R\{top},\(6)
+96 0|2<2&C0|2&CF|1<4
+AND	R\B,R\B
+20|2>3&FE|1>4 \2&0F|1<4
+ANDI	R\B,\B
+70|2>4 \2&0F|1<4
+ORG     \W
+\O1
+END     \W
+\S1
+DB      HIGH \W
+hi(1)
+DB      \L
+\1
+DW      \W
+hi(1) lo(1)
+DW      \M
+\1
+DS      \W
+\B1
+EQU     \W
+\E1
+.EQU     \W
+\E1
+PUBLIC
+\P
+LIB PROC
+\R
+LIB ENDP
+\Q
+PUBLIC EQU
+\P\E1
+EXTERN
+\X
+*

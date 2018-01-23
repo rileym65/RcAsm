@@ -1,0 +1,43 @@
+1802 -> Native
+CLASS ports
+1=1,2=2,3=3,4=4,5=5,6=6,7=7
+CLASS regs1
+A=0,L=1,Q=2,EB=3,FB=4,Z=5,BB=6,ARUPT=8,LRUPT=9,QRUPT=10,ZRUPT=13,BBRUPT=14,BRUPT=15,CYR=16,SR=17,CYL=18,EDOP=19
+*
+AD	\{regs1}
+60 lo(1)
+AD	\(C)
+hi(1)6% lo(1)
+ORG     \W
+\O1
+END     \W
+\S1
+DB      HIGH \W
+hi(1)
+DB      \L
+\1
+DW      \W
+hi(1) lo(1)
+DW      \M
+\1
+DS      \W
+\B1
+EQU     \{regs}
+\E1
+.EQU     \{regs}
+\E1
+EQU     \W
+\E1
+.EQU     \W
+\E1
+PUBLIC
+\P
+LIB PROC
+\R
+LIB ENDP
+\Q
+PUBLIC EQU
+\P\E1
+EXTERN
+\X
+*

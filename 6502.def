@@ -1,0 +1,333 @@
+6502 -> Native
+*
+ADC	(\b),Y
+71 \1
+ADC	(\b,X)
+61 \1
+ADC	#\b
+69 \1
+ADC	\b
+65 \1
+ADC	\b,X
+75 \1
+ADC	\w
+6D lo(1) hi(1)
+ADC	\w,X
+7D lo(1) hi(1)
+ADC	\w,Y
+79 lo(1) hi(1)
+AND	(\b),Y
+31 \1
+AND	(\b,X)
+21 \1
+AND	#\b
+29 \1
+AND	\b
+25 \1
+AND	\b,X
+35 \1
+AND	\w
+2D lo(1) hi(1)
+AND	\w,X
+3D lo(1) hi(1)
+AND	\w,Y
+39 lo(1) hi(1)
+ASL	A
+0A
+ASL	\b
+06 \1
+ASL	\b,X
+16 \1
+ASL	\w
+0E lo(1) hi(1)
+ASL	\w,X
+1E lo(1) hi(1)
+BCC	\d
+90 \1
+BCS	\d
+B0 \1
+BEQ	\d
+F0 \1
+BIT	\b
+24 \1
+BIT	\w
+2C lo(1) hi(1)
+BMI	\d
+30 \1
+BNE	\d
+D0 \1
+BPL	\d
+10 \1
+BRK
+00
+BVC	\d
+50 \1
+BVS	\d
+70 \1
+CLC
+18
+CLD
+D8
+CLI
+58
+CLV
+B8
+CMP	(\b),Y
+D1 \1
+CMP	(\b,X)
+C1 \1
+CMP	#\b
+C9 \1
+CMP	\b
+C5 \1
+CMP	\b,X
+D5 \1
+CMP	\w
+CD lo(1) hi(1)
+CMP	\w,X
+DD lo(1) hi(1)
+CMP	\w,Y
+D9 lo(1) hi(1)
+CPX	#\b
+E0 \1
+CPX	\b
+E4 \1
+CPX	\w
+EC lo(1) hi(1)
+CPY	#\b
+C0 \1
+CPY	\b
+C4 \1
+CPY	\w
+CC lo(1) hi(1)
+DEC	\b
+C6 \1
+DEC	\b,X
+D6 \1
+DEC	\w
+CE lo(1) hi(1)
+DEC	\w,X
+DE lo(1) hi(1)
+DEX
+CA
+DEY
+88
+EOR	(\b),Y
+51 \1
+EOR	(\b,X)
+41 \1
+EOR	#\b
+49 \1
+EOR	\b
+45 \1
+EOR	\b,X
+55 \1
+EOR	\w
+4D lo(1) hi(1)
+EOR	\w,X
+5D lo(1) hi(1)
+EOR	\w,Y
+59 lo(1) hi(1)
+INC	\b
+E6 \1
+INC	\b,X
+F6 \1
+INC	\w
+EE lo(1) hi(1)
+INC	\w,X
+FE lo(1) hi(1)
+INX
+E8
+INY
+C8
+JMP	(\w)
+6C lo(1) hi(1)
+JMP	\w
+4C lo(1) hi(1)
+JSR	\w
+20 lo(1) hi(1)
+LDA	(\b),Y
+B1 \1
+LDA	(\b,X)
+A1 \1
+LDA	#\b
+A9 \1
+LDA	\b
+A5 \1
+LDA	\b,X
+B5 \1
+LDA	\w
+AD lo(1) hi(1)
+LDA	\w,X
+BD lo(1) hi(1)
+LDA	\w,Y
+B9 lo(1) hi(1)
+LDX	#\b
+A2 \1
+LDX	\b
+A6 \1
+LDX	\b,Y
+B6 \1
+LDX	\w
+AE lo(1) hi(1)
+LDX	\w,Y
+BE lo(1) hi(1)
+LDY	#\b
+A0 \1
+LDY	\b
+A4 \1
+LDY	\b,X
+B4 \1
+LDY	\w
+AC lo(1) hi(1)
+LDY	\w,X
+BC lo(1) hi(1)
+LSR	A
+4A
+LSR	\b
+46 \1
+LSR	\b,X
+56 \1
+LSR	\w
+4E lo(1) hi(1)
+LSR	\w,X
+5E lo(1) hi(1)
+NOP
+EA
+ORA	(\b),Y
+11 \1
+ORA	(\b,X)
+01 \1
+ORA	#\b
+09 \1
+ORA	\b
+05 \1
+ORA	\b,X
+15 \1
+ORA	\w
+0D lo(1) hi(1)
+ORA	\w,X
+1D lo(1) hi(1)
+ORA	\w,Y
+19 lo(1) hi(1)
+PHA
+48
+PHP
+08
+PLA
+68
+PLP
+28
+ROL	A
+2A
+ROL	\b
+26 \1
+ROL	\b,X
+36 \1
+ROL	\w
+2E lo(1) hi(1)
+ROL	\w,X
+3E lo(1) hi(1)
+ROR	A
+6A
+ROR	\b
+66 \1
+ROR	\b,X
+76 \1
+ROR	\w
+6E lo(1) hi(1)
+ROR	\w,X
+7E lo(1) hi(1)
+RTI
+40
+RTS
+60
+SBC	(\b),Y
+F1 \1
+SBC	(\b,X)
+E1 \1
+SBC	#\b
+E9 \1
+SBC	\b
+E5 \1
+SBC	\b,X
+F5 \1
+SBC	\w
+ED lo(1) hi(1)
+SBC	\w,X
+FD lo(1) hi(1)
+SBC	\w,Y
+F9 lo(1) hi(1)
+SEC
+38
+SED
+F8
+SEI
+78
+STA	(\b),Y
+91 \1
+STA	(\b,X)
+81 \1
+STA	\b
+85 \1
+STA	\b,X
+95 \1
+STA	\w
+8D lo(1) hi(1)
+STA	\w,X
+9D lo(1) hi(1)
+STA	\w,Y
+99 lo(1) hi(1)
+STX	\b
+86 \1
+STX	\b,Y
+96 \1
+STX	\w
+8E lo(1) hi(1)
+STY	\b
+84 \1
+STY	\b,X
+94 \1
+STY	\w
+8C lo(1) hi(1)
+TAX
+AA
+TAY
+A8
+TSX
+BA
+TXA
+8A
+TXS
+9A
+TYA
+98
+ORG     \W
+\O1
+END     \W
+\S1
+DB      HIGH \W
+hi(1)
+DB      \L
+\1
+DW      \W
+lo(1) hi(1)
+DW      \M
+\1
+DS      \W
+\B1
+EQU     \{regs}
+\E1
+EQU     \W
+\E1
+PUBLIC
+\P
+LIB PROC
+\R
+LIB ENDP
+\Q
+PUBLIC EQU
+\P\E1
+EXTERN
+\X
+*
