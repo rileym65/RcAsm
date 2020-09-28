@@ -112,8 +112,8 @@ word find_label(char* buf)
 {
   int i;
   int f;
-  char buffer[30];
-  char ebuffer[64];
+  char buffer[128];
+  char ebuffer[255];
   char mode;
   mode='N';
   strcpy(buffer,buf);

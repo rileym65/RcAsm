@@ -25,9 +25,12 @@ void makeupper(char *buffer) {
 
 void trim(char *buffer) {
   char *BPtr;
+  char *DPtr;
   BPtr=buffer;
+  DPtr=buffer;
   while (*BPtr != '\0' && *BPtr <= ' ') BPtr++;
-  strcpy(buffer,BPtr);
+  while (*BPtr != 0) *DPtr++ = *BPtr++;
+  *DPtr = 0;
   while (buffer[0]!='\0' && buffer[strlen(buffer)-1]<=' ')
     buffer[strlen(buffer)-1]='\0';
   }
