@@ -4,6 +4,64 @@ CLASS ports
 CLASS regs
 R0=0,R1=1,R2=2,R3=3,R4=4,R5=5,R6=6,R7=7,R8=8,R9=9,RA=10,RB=11,RC=12,RD=13,RE=14,RF=15
 *
+ADD	\{regs},\{regs}
+\28% 73 60 \18% F4 \1A% \29% 73 60 \19% 74 \1B%
+ADD	\{regs},\W
+\18% FC lo(2) \1A% \19% 7C hi(2) \1B%
+ADC	\{regs},\{regs}
+\28% 73 60 \18% 74 \1A% \29% 73 60 \19% 74 \1B%
+ADC	\{regs},\W
+\18% 7C lo(2) \1A% \19% 7C hi(2) \1B%
+AND	\{regs},\{regs}
+\28% 73 60 \18% F2 \1A% \29% 73 60 \19% F2 \1B%
+AND	\{regs},\W
+\18% FA lo(2) \1A% \19% FA hi(2) \1B%
+BNZ	\{regs},\W
+\18% 3A lo(2) \19% 3A lo(2)
+BZ	\{regs},\W
+\18% 73 60 \19% F1 32 lo(2)
+DBNZ	\{regs},\W
+\12% \18% 3A lo(2) \19% 3A lo(2)
+DLBNZ	\{regs},\W
+\12% \18% CA hi(2) lo(2) \19% CA hi(2) lo(2)
+LBNZ	\{regs},\W
+\18% CA hi(2) lo(2) \19% CA hi(2) lo(2)
+LBZ	\{regs},\W
+\18% 73 60 \19% F1 C2 hi(2) lo(2)
+MOV	\{regs},\{regs}
+\28% \1A% \29% \1B%
+MOV	\{regs},\W
+F8 lo(2) \1A% F8 hi(2) \1B%
+OR	\{regs},\{regs}
+\28% 73 60 \18% F1 \1A% \29% 73 60 \19% F1 \1B%
+OR	\{regs},\W
+\18% F9 lo(2) \1A% \19% F9 hi(2) \1B%
+PUSH	\{regs}
+\18% 73 \19% 73 
+POP	\{regs}
+60 72 \1B% F0 \1A%
+SHL	\{regs}
+\18% FE \1A% \19% 7E \1B%
+SHLC	\{regs}
+\18% 7E \1A% \19% 7E \1B%
+SHR	\{regs}
+\19% F6 \1B% \18% 76 \1A%
+SHRC	\{regs}
+\19% 76 \1B% \18% 76 \1A%
+SBB	\{regs},\{regs}
+\28% 73 60 \18% 77 \1A% \29% 73 60 \19% 77 \1B%
+SBB	\{regs},\W
+\18% 7F lo(2) \1A% \19% 7F hi(2) \1B%
+SUB	\{regs},\{regs}
+\28% 73 60 \18% F7 \1A% \29% 73 60 \19% 77 \1B%
+SUB	\{regs},\W
+\18% FF lo(2) \1A% \19% 7F hi(2) \1B%
+XOR	\{regs},\{regs}
+\28% 73 60 \18% F3 \1A% \29% 73 60 \19% F3 \1B%
+XOR	\{regs},\W
+\18% FB lo(2) \1A% \19% FB hi(2) \1B%
+ZERO	\{regs}
+F8 00 \1A% \1B%
 ADD
 F4
 ADC
