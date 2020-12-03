@@ -383,10 +383,10 @@ char* ex_shl_shr(char* buffer,word* ret) {
 char* ex_and(char* buffer,word* ret) {
   word acc;
   word v2;
-//  char op;
+  char op;
   buffer = ltrim(ex_shl_shr(buffer,&acc));
   while (*buffer == '&') {
-//    op = *buffer++;
+    op = *buffer++;
     buffer = ltrim(ex_shl_shr(buffer,&v2));
     acc = acc & v2;
     }
