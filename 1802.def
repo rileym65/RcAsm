@@ -37,7 +37,7 @@ OR	\{regs},\{regs}
 OR	\{regs},\W
 \18% F9 lo(2) \1A% \19% F9 hi(2) \1B%
 PUSH	\{regs}
-\18% 73 \19% 73 
+\18% 73 \19% 73
 POP	\{regs}
 60 72 \1B% F0 \1A%
 SHL	\{regs}
@@ -96,6 +96,8 @@ ANI	\W.0
 FA lo(1)
 ANI	\W.1
 FA hi(1)
+B1 \W
+34 lo(1)
 B1	\B
 34 \1
 B1	\W.0
