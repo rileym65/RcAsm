@@ -96,6 +96,8 @@ ANI	\W.0
 FA lo(1)
 ANI	\W.1
 FA hi(1)
+B1 \W
+34 lo(1)
 B1	\B
 34 \1
 B1	\W.0
