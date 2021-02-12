@@ -96,7 +96,7 @@ ANI	\W.0
 FA lo(1)
 ANI	\W.1
 FA hi(1)
-B1 \W
+B1	\W 
 34 lo(1)
 B1	\B
 34 \1
@@ -404,12 +404,12 @@ SMBI	HIGH \W
 7F hi(1)
 SMBI	LOW \W
 7F lo(1)
-SMBI	\B
-7F \1
 SMBI	\W.0
 7F lo(1)
 SMBI	\W.1
 7F hi(1)
+SMBI	\B
+7F \1
 SMI     LOW \W
 FF lo(1)
 SMI	\B
