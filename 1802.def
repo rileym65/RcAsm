@@ -368,12 +368,20 @@ SD
 F5
 SDB
 75
+SDBI	LOW \W
+7D lo(1)
+SDBI	HIGH \W
+7D hi(1)
 SDBI	\B
 7D \1
 SDBI	\W.0
 7D lo(1)
 SDBI	\W.1
 7D hi(1)
+SDI	LOW \W
+FD lo(1)
+SDI	HIGH \W
+FD hi(1)
 SDI	\B
 FD \1
 SDI	\W.0
@@ -414,6 +422,8 @@ SMBI	\W.1
 7F hi(1)
 SMBI	\B
 7F \1
+SMI     HIGH \W
+FF hi(1)
 SMI     LOW \W
 FF lo(1)
 SMI	\B
@@ -432,6 +442,8 @@ XOR
 F3
 XRI     HIGH \W
 FB hi(1)
+XRI     LOW \W
+FB lo(1)
 XRI	\B
 FB \1
 XRI	\W.0
@@ -444,6 +456,8 @@ END     \W
 \S1
 DB      HIGH \W
 hi(1)
+DB      LOW \W
+lo(1)
 DB      \L
 \1
 DW      \W
