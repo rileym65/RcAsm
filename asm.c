@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#ifndef _WIN32
+#if defined(_WIN32) || defined(_WIN64)
+#include <io.h>
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
+#else
 #include <unistd.h>
+#define O_BINARY 0
 #endif
 #include "mstrings.h"
 #include "header.h"
