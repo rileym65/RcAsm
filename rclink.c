@@ -1,7 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#if defined(_WIN32) || defined(_WIN64)
+#include <io.h>
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
+#else
 #include <unistd.h>
+#define O_BINARY 0
+#endif
 
 #define OUTPUT_COM 1
 #define OUTPUT_CMD 2
